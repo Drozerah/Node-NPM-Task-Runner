@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean:dist": "rm -rf dist && mkdir dist",
+    "babel": "npm run clean:dist && babel app.js --out-file dist/app.min.js --source-maps inline --presets minify"
   },
   "keywords": [],
   "author": {
@@ -12,5 +13,12 @@
     "email": "drozerah@gmail.com",
     "url": "https://github.com/Drozerah"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-preset-minify": "^0.5.1",
+    "babelify": "^10.0.0"
+  }
 }
