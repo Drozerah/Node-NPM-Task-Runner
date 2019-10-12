@@ -1,7 +1,11 @@
 
 {
     // Live Server
-    // "liveServer.settings.root": "./index.html",
+    // https://github.com/ritwickdey/vscode-live-server/blob/master/docs/settings.md
+    "liveServer.settings.root": "/index.html",
+    "liveServer.settings.ignoreFiles": [
+        "**/*.scss"
+    ],
     // -----------
     // live Sass Compiler
     "liveSassCompile.settings.showOutputWindow": false,
