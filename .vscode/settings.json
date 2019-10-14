@@ -2,15 +2,20 @@
 {
     // Live Server
     // https://github.com/ritwickdey/vscode-live-server/blob/master/docs/settings.md
-    "liveServer.settings.root": "/index.html",
+    "liveServer.settings.root": "/src/",
+    "liveServer.settings.host": "localhost",
+    // "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.ignoreFiles": [
+        "./app.js",
+        "./src/app/app_modules/*",
         "**/*.scss"
     ],
     // -----------
     // live Sass Compiler
+    // https://github.com/ritwickdey/vscode-live-sass-compiler/blob/master/docs/settings.md
     "liveSassCompile.settings.showOutputWindow": false,
     // "liveSassCompile.settings.includeItems": [
-    //     "path/subpath/a.scss"
+    //     "bundle.js"
     // ],
     "liveSassCompile.settings.formats":[
         {
@@ -18,11 +23,11 @@
             "extensionName": ".css",
             "savePath": "/src/css"
         },
-        // {
-        //     "format": "compressed",
-        //     "extensionName": ".min.css",
-        //     "savePath": "/src/css"
-        // },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/src/css"
+        },
     ],
     "liveSassCompile.settings.autoprefix": [
         "> 1%",

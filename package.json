@@ -1,11 +1,13 @@
 {
-  "name": "handlebars-app",
+  "name": "browserify-vscode-work-space",
   "version": "1.0.0",
-  "description": "",
+  "description": "Working with browserify & VSCode",
   "main": "app.js",
+  "config": {
+  },
   "scripts": {
-    "clean:dist": "rm -rf dist && mkdir dist",
-    "babel": "npm run clean:dist && babel app.js --out-file dist/app.min.js --source-maps inline --presets minify"
+    "start": "browserify -t babelify -e ./src/app.js -o ./src/app/js/bundle.js",
+    "start:watch": "watchify -v -t babelify -e ./src/app.js -o ./src/app/js/bundle.js"
   },
   "keywords": [],
   "author": {
@@ -19,6 +21,8 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "babel-preset-minify": "^0.5.1",
-    "babelify": "^10.0.0"
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "watchify": "^3.11.1"
   }
 }
