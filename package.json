@@ -4,6 +4,9 @@
   "description": "Working with browserify & VSCode",
   "main": "app.js",
   "config": {
+    "build": {
+      "outputDir" : "dist" 
+    }
   },
   "scripts": {
     "build": "node ./bin/",

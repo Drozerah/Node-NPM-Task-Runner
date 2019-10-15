@@ -17,15 +17,19 @@ const rimraf = require("rimraf")
 const mkdir = require('./lib.js').mkdir
 const dirStrName = require('./lib.js').dirStrName
 
-// create dist folder
-const dist = path.join(__dirname, '../dist')
+/**
+* Create the build output directory from package.json
+* config build section directory name
+*/
+let outputDir = `../${process.env.npm_package_config_build_outputDir}`
+outputDir = path.join(__dirname, outputDir)
 
-if (fs.existsSync(dist)){
-  rimraf(dist, () => { // remove folder if already exists
-    console.log(`${dirStrName(dist)} already exists`)
-    console.log(`${dirStrName(dist)} has been removed`)
-    mkdir(dist) // create dir
+if (fs.existsSync(outputDir)){
+  rimraf(outputDir, () => { // remove folder if already exists
+    console.log(`${dirStrName(outputDir)} already exists`)
+    console.log(`${dirStrName(outputDir)} has been removed`)
+    mkdir(outputDir) // create dir
   })
 } else {
-  mkdir(dist) // create dir
+  mkdir(outputDir) // create dir
 }
