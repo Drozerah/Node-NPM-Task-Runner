@@ -5,7 +5,7 @@
   "main": "app.js",
   "config": {
     "build": {
-      "outputDir" : "dist" 
+      "outputDir": "dist"
     }
   },
   "scripts": {
@@ -27,6 +27,8 @@
     "babel-preset-minify": "^0.5.1",
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
+    "chalk": "^2.4.2",
+    "fs-extra": "^8.1.0",
     "rimraf": "^3.0.0",
     "watchify": "^3.11.1"
   }
