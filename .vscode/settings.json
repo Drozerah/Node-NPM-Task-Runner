@@ -2,7 +2,7 @@
     "liveServer.settings.root": "/src/",
     "liveServer.settings.host": "localhost",
     "liveServer.settings.ignoreFiles": [
-        "./app.js",
+        "./src/app.js",
         "./src/app/app_modules/*",
         "**/*.scss"
     ],
