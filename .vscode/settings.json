@@ -1,23 +1,14 @@
-
 {
-    // Live Server
-    // https://github.com/ritwickdey/vscode-live-server/blob/master/docs/settings.md
     "liveServer.settings.root": "/src/",
     "liveServer.settings.host": "localhost",
-    // "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.ignoreFiles": [
         "./app.js",
         "./src/app/app_modules/*",
         "**/*.scss"
     ],
-    // -----------
-    // live Sass Compiler
-    // https://github.com/ritwickdey/vscode-live-sass-compiler/blob/master/docs/settings.md
+    "liveSassCompile.settings.generateMap": true,
     "liveSassCompile.settings.showOutputWindow": false,
-    // "liveSassCompile.settings.includeItems": [
-    //     "bundle.js"
-    // ],
-    "liveSassCompile.settings.formats":[
+    "liveSassCompile.settings.formats": [
         {
             "format": "expanded",
             "extensionName": ".css",
@@ -27,19 +18,16 @@
             "format": "compressed",
             "extensionName": ".min.css",
             "savePath": "/src/css"
-        },
+        }
     ],
     "liveSassCompile.settings.autoprefix": [
         "> 1%",
         "last 2 versions"
     ],
-    "liveSassCompile.settings.generateMap": true,
     "liveSassCompile.settings.excludeList": [ 
         "**/node_modules/**",
         ".vscode/**"
     ],
-    // ------------------
-    // Peacock
     "workbench.colorCustomizations": {
         "activityBar.background": "#3399ff",
         "activityBar.foreground": "#15202b",
@@ -55,5 +43,4 @@
         "statusBar.foreground": "#e7e7e7"
     },
     "peacock.color": "#007fff"
-    // -------
 }
