@@ -1,7 +1,7 @@
 {
-  "name": "browserify-vscode-work-space",
+  "name": "node-npm-task-runner",
   "version": "1.0.0",
-  "description": "Working with browserify & VSCode",
+  "description": "Working with VSCode, Node scripts and NPM scripts as task runner",
   "main": "app.js",
   "config": {
     "build": {
