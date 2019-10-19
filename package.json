@@ -7,15 +7,16 @@
     "build": {
       "outputDir": "dist",
       "hash": "true",
-      "compressedCSS": "true"
+      "compressedCSS": "false"
     }
   },
   "scripts": {
     "build": "node ./bin/",
     "start": "browserify -t babelify -e ./src/app.js -o ./src/app/js/bundle.js",
     "watch:js": "watchify -v -t babelify -e ./src/app.js -o ./src/app/js/bundle.js",
+    "watch:sass": "node-sass --output-style compressed --watch src/scss -o src/css --source-map src/css",
     "watch:server": "node browser-sync.js",
-    "watch": "npm-run-all -p watch:*",
+    "watch": "npm-run-all -p -n watch:*",
     "lint:js": "eslint ./src/*.js ./bin/*.js"
   },
   "keywords": [],
@@ -41,6 +42,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "fs-extra": "^8.1.0",
+    "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.0",
     "watchify": "^3.11.1"

@@ -46,8 +46,8 @@ const HTMLSourceFIlePath = `./${findFilesInDir('./src', '.html')[0].replace(/\\/
 const HTMLDestinationFilePath = `${outputDir}/${HTMLFileName}`
 // working with CSS file
 // we use the prefix string (file name) of the file.scss
-// found in ./src to create our prefix.css files
-let CSSPrefix = findFilesInDir('./src', '.scss').filter(str => {
+// found in ./src/scss to create our prefix.css files
+let CSSPrefix = findFilesInDir('./src/scss/', '.scss').filter(str => {
   if (!str.includes('_')) return str
 })
 // file prefix

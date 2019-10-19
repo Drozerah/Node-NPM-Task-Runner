@@ -53,7 +53,7 @@ module.exports = {
   cors: false,
   notify: true,
   reloadDelay: 0,
-  reloadDebounce: 500,
+  reloadDebounce: 800,
   reloadThrottle: 0,
   tagNames: {
     less: 'link',
