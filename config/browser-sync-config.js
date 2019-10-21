@@ -52,7 +52,7 @@ module.exports = {
   browser: 'chrome',
   cors: false,
   notify: true,
-  reloadDelay: 0,
+  reloadDelay: 800,
   reloadDebounce: 800,
   reloadThrottle: 0,
   tagNames: {

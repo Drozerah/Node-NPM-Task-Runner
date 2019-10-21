@@ -7,14 +7,15 @@
     "build": {
       "outputDir": "dist",
       "hash": "true",
-      "compressedCSS": "false"
+      "compressedCSS": "false",
+      "format": "compressed"
     }
   },
   "scripts": {
     "build": "node ./bin/",
     "start": "browserify -t babelify -e ./src/app.js -o ./src/app/js/bundle.js",
     "watch:js": "watchify -v -t babelify -e ./src/app.js -o ./src/app/js/bundle.js",
-    "watch:sass": "node-sass --output-style compressed --watch src/scss -o src/css --source-map src/css",
+    "watch:sass": "node-sass --output-style %npm_package_config_build_format% --watch src/scss -o src/css --source-map src/css",
     "watch:server": "node browser-sync.js",
     "watch": "npm-run-all -p -n watch:*",
     "lint:js": "eslint ./src/*.js ./bin/*.js"
