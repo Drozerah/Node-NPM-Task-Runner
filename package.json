@@ -15,7 +15,7 @@
     "build": "node ./bin/",
     "start": "browserify -t babelify -e ./src/app.js -o ./src/app/js/bundle.js",
     "watch:js": "watchify -v -t babelify -e ./src/app.js -o ./src/app/js/bundle.js",
-    "watch:sass": "node-sass --output-style %npm_package_config_build_format% --watch src/scss -o src/css --source-map src/css",
+    "watch:sass": "cross-var node-sass --output-style $npm_package_config_build_format --watch src/scss -o src/css --source-map src/css",
     "watch:server": "node browser-sync.js",
     "watch": "npm-run-all -p -n watch:*",
     "lint:js": "eslint ./src/*.js ./bin/*.js"
@@ -36,6 +36,7 @@
     "browser-sync": "^2.26.7",
     "browserify": "^16.5.0",
     "chalk": "^2.4.2",
+    "cross-var": "^1.1.0",
     "eslint": "^6.5.1",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",

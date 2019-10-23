@@ -1,5 +1,6 @@
 # Ignored folders
 /node_modules
 /dist
-
+src/css
 # Ignored files
+issues.md

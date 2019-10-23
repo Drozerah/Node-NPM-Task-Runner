@@ -25,7 +25,7 @@ module.exports = {
     'change'
   ],
   watch: true, // custom
-  ignore: ['**/*.md', 'node_modules/**/*', 'config', 'package.json'], // custom
+  ignore: ['**/*.md', 'node_modules/**/*', 'config', 'package.json', 'src/css/**'], // custom
   single: false,
   watchOptions: {
     ignoreInitial: true
@@ -49,7 +49,7 @@ module.exports = {
   // ],
   serveStatic: [],
   logLevel: 'info',
-  browser: 'chrome',
+  browser: 'default',
   cors: false,
   notify: true,
   reloadDelay: 800,

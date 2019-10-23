@@ -1,6 +1,7 @@
 {
     "liveServer.settings.root": "/src/",
     "liveServer.settings.host": "localhost",
+    "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
     "liveServer.settings.ignoreFiles": [
         "./src/app.js",
         "./src/app/app_modules/*",
