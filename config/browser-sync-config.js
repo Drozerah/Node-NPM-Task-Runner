@@ -20,12 +20,12 @@ module.exports = {
   ui: {
     port: 3001
   },
-  files: false,
+  files: ['src/css/*.css', 'src/app/js/*.js', 'src/index.html'],
   watchEvents: [
     'change'
   ],
-  watch: true, // custom
-  ignore: ['**/*.md', 'node_modules/**/*', 'config', 'package.json', 'src/css/**'], // custom
+  watch: false, // custom
+  ignore: ['*.md', 'node_modules/**/*', 'src/**/*.scss'], // custom
   single: false,
   watchOptions: {
     ignoreInitial: true
